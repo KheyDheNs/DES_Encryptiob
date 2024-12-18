@@ -76,55 +76,51 @@ Each round involves:
 1. **Run the Program:**
    - Use any program that can run Python scripts, I personnally use PyCharm.
    
-3. **Choose to Encrypt:**
-   - Enter `1` at the menu to encrypt.
+2. **Choose to Encrypt:**
 
-4. **Provide Plaintext:**
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/1.png?raw=true)
+   - Enter `1` at the menu to encrypt.     
+
+3. **Provide Plaintext:**
+   - Once done, the code will ask you to provide a plaintext.
+   
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/2.png?raw=true)
    - Input an 8-character string (here, I took `ABCD1234`).
 
-5. **Provide a Key:**
-   - Optionally generate a random key or input your own 8-character key (here, I chose `abcd1234`).
+4. **Provide a Key:**
+   - The next step is to get a key. You'll have a choice to generate a random key or to enter one by yourself.
+     
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/3.png?raw=true)
+   - If you choose to generate a random key, you'll get a random hexadecimal key in response.
+   
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/4.png?raw=true)
+   - Otherwise, you have to input your own 8-character key (here, I chose `abcd1234`).
+
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/5.png?raw=true)
 
 6. **View the Output:**
-   - The program will display the generated/encrypted key and the encrypted ciphertext in hexadecimal format.
+   - Finally, the program will display the newly encrypted cyphertext (in hexadecimal). My result here is `aed3cb7f0f484056`.
 
----
+   ![alt text](https://github.com/KheyDheNs/DES_Encryption/blob/main/images/6.png?raw=true)
 
-## **Example Walkthrough**
-
-### Input:
-  - **Plaintext:** `ABCD1234`
-  - **Key:** `abcd1234`
-
-### Process:
-1. **Plaintext to Bits:**
-  - `ABCD1234` is converted to binary (64 bits).
-2. **Initial Permutation:**
-  - Bits are reordered using the **IP table**.
-3. **Key Generation:**
-  - The key `abcd1234` is permuted and shifted to generate 16 round keys.
-4. **Feistel Rounds:**
-  - Each round transforms the plaintext block using the round keys.
-5. **Final Permutation:**
-  - After 16 rounds, the final block is permuted to produce the ciphertext.
-
-### Output:
-  - **Encrypted Result:** `aed3cb7f0f484056`
+7. **Redo the process or exit:**
+   - The script will relaunch itself automatically after generating the results.
+   - You can either choose `1` to try again with different values, or `2` to exit it
 
 ---
 
 ## **Simplified Explanation for Each Step**
 
 1. **Key Generation:**
-  - DES derives 16 round keys from your input key through bit permutations and shifts.
+   - DES derives 16 round keys from your input key through bit permutations and shifts.
 
 2. **Initial Permutation (IP):**
-  - The plaintext bits are shuffled to prepare for encryption.
+   - The plaintext bits are shuffled to prepare for encryption.
 
 3. **Rounds (Feistel Structure):**
-  - DES uses 16 rounds of processing:
-    - The **right half** of the block is transformed.
-    - The **left half** is swapped with the transformed result.
+   - DES uses 16 rounds of processing:
+      - The **right half** of the block is transformed.
+      - The **left half** is swapped with the transformed result.
 
 4. **Final Permutation (FP):**
-  - The output bits are reordered to produce the final ciphertext.
+   - The output bits are reordered to produce the final ciphertext.
