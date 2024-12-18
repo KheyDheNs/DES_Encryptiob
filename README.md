@@ -74,19 +74,19 @@ Each round involves:
 ## **How to Use the Code**
 
 1. **Run the Program:**
-  
+   - Use any program that can run Python scripts, I personnally use PyCharm.
+   
+3. **Choose to Encrypt:**
+   - Enter `1` at the menu to encrypt.
 
-2. **Choose to Encrypt:**
-  - Enter `1` at the menu.
+4. **Provide Plaintext:**
+   - Input an 8-character string (here, I took `ABCD1234`).
 
-3. **Provide Plaintext:**
-  - Input an 8-character string (here, I took `ABCD1234`).
+5. **Provide a Key:**
+   - Optionally generate a random key or input your own 8-character key (here, I chose `abcd1234`).
 
-4. **Provide a Key:**
-  - Optionally generate a random key or input your own 8-character key (here, I chose `abcd1234`).
-
-5. **View the Output:**
-  - The program will display the generated/encrypted key and the encrypted ciphertext in hexadecimal format.
+6. **View the Output:**
+   - The program will display the generated/encrypted key and the encrypted ciphertext in hexadecimal format.
 
 ---
 
